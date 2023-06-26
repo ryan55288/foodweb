@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Jabar成長</title>
+    <style>
+        .jumbotron-grow-bg {
+            background-image: url(https://media.istockphoto.com/id/1285264139/photo/cheerful-woman-eating-vegetable-salad-from-bowl-and-looking-at-copy-space.jpg?s=612x612&w=0&k=20&c=8jIPPrGW4mPQLt_s7jBfLSSTy058U_1n3TCfTE-JFeM=);
+            background-size: auto;
+            background-position: center center;
+            min-height: 325px;
+        }
+
+        .btn {
+            border-width: 2px;
+        }
+
+        .header-carousel {
+            height: 450px;
+        }
+
+        .form-control {
+            border-width: 2px;
+        }
+
+        .bg-cover {
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* 背景遮罩色 */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+
+        /* 在768以上會套用這個色彩 */
+        @media (min-width: 768px) {
+            .text-md-dark {
+                color: #333;
+            }
+        }
+
+        /* 在768以下會套用這個色彩 */
+        @media (max-width: 768px) {
+            .text-all-sm-light {
+                color: #FFF;
+                border-color: #FFF;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand text-light font-weight-bold" href="#">首頁</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light font-weight-bold" href="/blog.html">部落格 <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light font-weight-bold" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            美味菜單
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/foodVideo.html">美食影音</a>
+                            <a class="dropdown-item " href="#">其他</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0 mr-2 font-weight-bold" type="submit">搜尋</button>
+                    <a href="" class="btn btn-outline-light font-weight-bold" data-toggle="modal"
+                        data-target="#registerModal">註冊</a>
+                    <a href="" class="btn btn-outline-light font-weight-bold ml-2" data-toggle="modal"
+                        data-target="#loginModal">登入</a>
+                </form>
+            </div>
+
+        </div>
+    </nav>
+    <div class="header">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item header-carousel active bg-cover"
+                    style="background-image: url(https://media.istockphoto.com/id/1407982559/photo/spaghetti-or-linguine-with-meat-and-tomato-sauce-bolognese-on-a-black-plate-and-dark.jpg?s=612x612&w=0&k=20&c=bbJzS2g5hpTtXqLqGVkKmL71HyAmoWoxiCtEDzVGPUI=);">
+                    <img class="d-block w-100" src="">
+                    <div class="carousel-caption d-none d-md-block px-2">
+                        <h5>"盡享美味蕾盛宴，用美食穿越世界，發現美食的奇妙之旅！"</h5>
+                        <p>Jabar麵食館，鮮味十足。濃郁湯頭、Q彈麵條，讓您的品味道地的麵食美味。</p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel bg-cover"
+                    style=" background-image: url(https://images.unsplash.com/photo-1513185158878-8d8c2a2a3da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJ1cmdlcnxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60);">
+                    <img class="d-block w-100" src="">
+                    <div class="carousel-caption d-none d-md-block px-2">
+                        <h5>"尽享味蕾盛宴，用美食穿越世界，发现美食的奇妙之旅！"</h5>
+                        <p>"在这个美食部落格中，让我与你一起品味世界各地的美食，探索独特的口味，分享精彩的食谱，让味蕾舞动在无尽的美食盛宴中，让我们一同探索美食的魅力与故事。"</p>
+                    </div>
+                </div>
+                <div class="carousel-item header-carousel bg-cover"
+                    style="background-image: url(https://images.unsplash.com/photo-1609159086308-e8de8a538e28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIzfHxwaXp6YXxlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60);">
+                    <img class="d-block w-25" src="">
+                    <div class="carousel-caption d-none d-md-block px-2">
+                        <h5>"尽享味蕾盛宴，用美食穿越世界，发现美食的奇妙之旅！"</h5>
+                        <p>"品味美食之旅，Jabar帶您穿越世界，品嚐來自各地的精緻美食，讓您的味蕾與舌尖共舞。"</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <section class="bg-info py-5 text-white">
+        <div class="container my-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="mb-2 text-center"><i class="fas fa-chart-line fa-3x"></i></div>
+                    <P>從開幕至5年期間，Jabar麵食館經歷了巨大的變化和成長。我們從一家新興的麵食店發展成為當地的知名品牌。我們不斷提升菜單，引入更多創新和更多樣化的麵
+                    </P>
+                </div>
+                <!-- 四行以上會顯示此寬度 比較小裝置使用滿版寬 -->
+                <div class="col-md-4">
+                    <div class="mb-2 text-center"><i class="fas fa-hand-holding-water fa-3x"></i></i></div>
+                    <P>在過去的5至10年間，Jabar麵食館經歷了驚人的成長和變化，從一家本地小餐館發展成為麵食界的領先品牌。
+                        我們不斷地精進我們的飲食理念和技巧，提供無與倫比的麵食體驗。透過與廚師團隊的合作，我們推出了更多創新的菜單選項，將傳統的麵食與現代元素相結合，為顧客帶來驚喜和滿足感。
+                    </P>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-2 text-center"><i class="fas fa-layer-group fa-3x"></i></div>
+                    <P>在過去的10至20年間，Jabar麵食館經歷了蓬勃的成長和不斷的創新，成為麵食界的翹楚。
+                        我們不斷推陳出新，引入更多地道的國際美食風味，為顧客帶來更廣泛的選擇。同時，我們繼續與當地農民和供應商合作合作，注意重新使用新鮮、有機的食材，提供優質的食材。
+                        隨著技術的發展，我們積極採用智能化系統，提供線上預訂、自助點餐等便利服務，讓顧客享受更快捷、高效的用餐飲體驗。
+                    </P>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid py-5 bg-light text-white" style="position: relative;">
+        <div class="col-md-5 bg-cover"
+            style=" position: absolute;top:0;bottom: 0;  background-image: url(https://media.istockphoto.com/id/516329534/photo/last-straw.jpg?s=612x612&w=0&k=20&c=q9tScD01SPtN5QNAYgWG-ot4n_4hZXOgMStuFgmBFa8=);">
+        </div>
+        <div class="container">
+            <div class="row justify-content-end  text-md-dark">
+                <div class="col-md-7">
+                    <h3 class="text-info text-center">Jabar的分店</h3>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h4 class="text-dark">北車分館</h4>
+                            <p>北車分店特色：位於交通樞紐，提供快捷又美味的麵食，方便忙碌的旅客享用。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-dark">公館分館</h4>
+                            <p>青春活潑的學生氛圍，提供多種多樣的麵食選擇，讓學生們享受美食美食的同時感受學習生活的活力。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-dark">信義分館</h4>
+                            <p>位於繁華商圈，精緻的用餐環境和高品質的麵食，結合了時尚與美味，讓您享受奢華的餐飲體驗。</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-dark">新生分館</h4>
+                            <p>新生分店特色：獨特的地理位置，環境優美，提供新鮮食材和精緻調製的湯頭，讓您在舒適的環境中享受正宗的麵食。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3 bg-light">
+        <div class="container">
+            <h2 class="text-center my-3 mb-3">如何這麼美味</h2>
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-shipping-fast fa-3x text-info"></i></div>
+                        <div>
+                            <h3 class="mr-3">新鮮食材</h3>
+                            <p>Jabar注重使用新鮮、優質的食材，從麵條到湯頭，每一道菜都帶來絕佳的口感和美感。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-bullhorn fa-3x text-info"></i></div>
+                        <div>
+                            <h3 class="mr-3">獨特湯頭</h3>
+                            <p>Jabar的湯頭經過長時間的熬煮，深入提煉鮮美的風味，濃郁的湯底讓每一口食物都充滿豐盛的味道。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="far fa-hand-point-right fa-3x text-info"></i></div>
+                        <div>
+                            <h3 class="mr-3">多種選擇</h3>
+                            <p>Jabar提供多種麵食選擇，從傳統的紅燒牛肉麵到創新的特色麵食，滿足不同顧客的口味和美味。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex">
+                        <div class="mr-3"><i class="fas fa-user-tie fa-3x text-info"></i></div>
+                        <div>
+                            <h3 class="mr-3">精湛工藝</h3>
+                            <p>廚師團隊擁有豐富的經驗和技藝，將傳統的烹飪方法和現代的創意結合，打造出精心製作的美味佳趣，讓您的味蕾與舌尖共舞。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="jumbotron jumbotron-fluid jumbotron-grow-bg">
+
+    </div>
+    <section class="bg-light py-5">
+        <div class="container bg-light">
+            <div class="row">
+                <div class="col-md-6 "><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7887726090785!2d121.56398417457584!3d25.041241438001407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb95967d2f9%3A0x70f6cc0685df9916!2z5biC5pS_5bqc!5e0!3m2!1szh-TW!2stw!4v1685258331711!5m2!1szh-TW!2stw"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <div class="col-md-6">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="username">姓名*</label>
+                            <input type="text" class="form-control" id="username" placeholder="請輸入姓名" required>
+                            <div class="invalid-feedback">
+                                請輸入姓名
+                            </div>
+                        </div>
+                        <!-- type記得調整手機版材會跳出按鍵 -->
+                        <div class="form-group">
+                            <label for="tel">電話*</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="請輸入電話" required>
+                            <div class="invalid-feedback">
+                                請輸入電話
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email*</label>
+                            <input type="text" class="form-control" id="email" placeholder="請輸入email" required>
+                            <div class="invalid-feedback">
+                                請輸入email
+                            </div>
+                        </div>
+                        <!-- type調整後代表只能輸入數字 -->
+                        <div class="form-group">
+                            <label for="people">人數*</label>
+                            <input type="number" class="form-control" id="people" placeholder="請輸入人數" required>
+                            <div class="invalid-feedback">
+                                請輸入人數
+                            </div>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <!-- name相同視為同一個群組 -->
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">素食主義</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">肉食主義</label>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-secondary" type="button">取消</button>
+                            <button class="btn btn-primary" type="submit">送出</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 bg-cover"
+                    style="height: 240px; background-image: url(https://media.istockphoto.com/id/498309616/photo/great-ocean-road-at-night-milky-way-view.jpg?s=612x612&w=0&k=20&c=fJGWCAB4JoXaQD6gjJRHjPmPIRvx5e6K-1Oq2EeOZwk=);">
+                    <div class="row">
+                        <div class="col-md-9 p-3 text-white">
+                            <h3>請加入我們</h3>
+                            <p>讓美食狂熱，發現烹調的奇妙，滿足的味道蕾的渴望。歡迎加入PASATA，一起探索美食文化，創造味道感覺奇蹟！</p>
+                            <a href="" class="btn btn-outline-light">加入我們</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-cover"
+                    style="background-image: url(https://media.istockphoto.com/id/516180836/photo/green-rice-fild-with-evening-sky.jpg?s=612x612&w=0&k=20&c=ctpEGZYCM8-ST1YuJR99vcOInfOnIo4ghZolX18EK8Y=);">
+                    <div class="row">
+                        <div class="col-md-9 p-3 text-dark">
+                            <h3>公司資訊</h3>
+                            <p>電話:0903555444</p>
+                            <p>HR:09503555777</p>
+                            <p>地址:台北市中山區集賢路32號</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer py-3 bg-info ">
+        <div class="d-flex justify-content-end mr-3 ">
+            <i class="fab fa-facebook-square text-light fa-1x"></i>
+            <i class="fab fa-instagram text-light fa-1x ml-2"></i>
+            <i class="fab fa-twitter-square text-light fa-1x ml-2"></i>
+            <i class="fab fa-twitch text-light fa-1x ml-2"></i>
+        </div>
+    </div>
+    <!-- Modal 1-->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header btn-warning text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">帳號</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="可輸入身分證">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="" data-dismiss="modal" class="mr-auto" data-toggle="modal"
+                        data-target="#registerModal">還沒有帳號?</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-warning text-white">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header btn-info text-white">
+                    <h5 class="modal-title" id="exampleModalLabel">註冊</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">信箱</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">帳號</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="可輸入身分證">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="" data-dismiss="modal" class="mr-auto" data-dismiss="modal" data-toggle="modal"
+                        data-target="#loginModal">切換到登入</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                    <button type="button" class="btn btn-info ">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+                console.log('ready')
+                $('a[data-dismiss="modal"][data-toggle="modal"]').on('click', function () {
+                    console.log('click')
+                    var target = $(this).data('target')
+                    console.log('target', target)
+                    $(target).on('shown.bs.modal', function () {
+                        $('body').addClass('modal-open')
+                    })
+                })
+                // <a href="" data-dismiss="modal" class="mr-auto" data-toggle="modal" 
+                //             data-target="loginModal">切換到登入</a>
+            }) <
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食電商</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- 頂部標籤 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">電商網站</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/blog.html">Janbar部落客<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Search</button>
+                <button class="btn btn-success my-2 my-sm-0"><a href="./backstage.html" class="text-white"
+                        data-target="#login" data-toggle="modal">客服</a></button>
+            </form>
+            <!-- 購物車內的數量定位 -->
+            <div class="dropdown ml-auto">
+                <button type="button" class="btn btn-cart btn-outline-success btn-sm" data-toggle="dropdown"
+                    data-flip="false">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                    <span class="badge badge-pill badge-danger">12</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" style="min-width: 350px;">
+                    <table class="table table-hover">
+                        <thead class="thead-dark pt-3">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">項目</th>
+                                <th scope="col">已選擇商品</th>
+                                <th scope="col">數量</th>
+                                <th scope="col">價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <a href="#" class="del" data-target="#del" data-toggle="modal" data-tile="超好吃拉麵"><i
+                                            class="fas fa-trash-alt text-dark"></i></a>
+                                </th>
+                                <th scope="row">1</th>
+                                <td>超好吃拉麵</td>
+                                <td>1</td>
+                                <td class="text-right">$550</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="#" class="del" data-target="#del" data-toggle="modal" data-tile="超好吃牛肉麵"><i
+                                            class="fas fa-trash-alt text-dark"></i></a>
+                                </th>
+                                <th scope="row">2</th>
+                                <td>超好吃牛肉麵</td>
+                                <td>5</td>
+                                <td class="text-right">$1000</td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <a href="#" class="del" data-target="#del" data-toggle="modal" data-tile="超好吃乾麵"><i
+                                            class="fas fa-trash-alt text-dark"></i></a>
+                                </th>
+                                <th scope="row">3</th>
+                                <td>超好吃乾麵</td>
+                                <td>3</td>
+                                <td class="text-right">$600</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="p-3">
+                        <a href="./total_step.html" class="btn btn-success btn-block">結帳去</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- <div class="jumbotron jumbotron-fluid jumbotron-bg d-flex  align-items-end">
+        <div class="container">
+            <div class="bg-lighter p-3">
+                <h1 class="display-4">冷凍大特價</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
+                </p>
+            </div>
+        </div>
+    </div> -->
+    <div class="header">
+        <div id="carouselExampleIndicators" class="carousel slide bg-lighter" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item header-carousel-item bg-cover active bg-carousel"
+                    style="background-image: url(https://images.unsplash.com/photo-1626509653291-5558b258f107?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvb2slMjBub29kbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);">
+                    <img src="" class="d-block w-100 ">
+                </div>
+                <div class="carousel-item  header-carousel-item bg-cover bg-carousel"
+                    style="background-image: url(https://images.unsplash.com/photo-1605311525808-ea0daef137b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bm9vZGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);">
+                    <img src="" class="d-block w-100">
+                </div>
+                <div class="carousel-item  header-carousel-item bg-cover bg-carousel"
+                    style="background-image: url(https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmVlZiUyMG5vb2RsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);">
+                    <img src="" class="d-block w-100">
+                </div>
+            </div>
+            <div class="carousel-caption  py-3 bg-lighter">
+                <h5 class="font-weight-bold fz-25">全台最好的美食電商平台</h5>
+                <p class="mt-3">提供每一位客人舒適、溫馨的用餐環境，全時段的服務、親切的價格、道地的台灣原味，是全家聚餐、朋友約會的最佳選擇。
+                </p>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- sticky-top 將欄位固定在上方 -->
+                <div class="list-group  mt-3">
+                    <a href="#pane-1" class="list-group-item list-group-item-action " aria-current="true"
+                        data-toggle="list">
+                        <i class="fas fa-utensils mr-2"></i>
+                        湯麵系列
+                    </a>
+                    <a href="#pane-2" class="list-group-item list-group-item-action" data-toggle="list">
+                        <i class="fas fa-pepper-hot  mr-2"></i>乾麵系列
+                    </a>
+                    <a href="#pane-3" class="list-group-item list-group-item-action" data-toggle="list"><i
+                            class="fas fa-bacon mr-2"></i>河粉系列</a>
+                    <a href="#pane-4" class="list-group-item list-group-item-action" data-toggle="list"><i
+                            class="fas fa-drumstick-bite mr-2"></i>
+                        炒飯系列</a>
+                    <a href="#pane-5" class="list-group-item list-group-item-action" data-toggle="list"><i
+                            class="fas fa-bone mr-2"></i>
+                        壽司系列</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="pane-1">
+                        <div class="row">
+                            <div class="col-lg-4 mb-4 mt-3 col-sm-5">
+                                <div class="card text-center border-0 box-shadow card-high h-100">
+                                    <img src="https://images.unsplash.com/photo-1597345637412-9fd611e758f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVlZiUyMG5vb2RsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">半筋紅燒牛肉麵</h5>
+                                        <p class="card-text">
+                                            半筋紅燒牛肉麵，湯底濃郁鮮美，牛肉酥燒多汁，配上彈牙麵條，每一口都是舌尖上的享受。絕對是經典美食中的必嘗之選！</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white bg-shadow">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n1_1.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4 mt-3 col-sm-5">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/lanzhou-stretched-noodles-picture-id1293674026?b=1&k=20&m=1293674026&s=170667a&w=0&h=SCRwBJLQjDj3qwq25Bk0pb2COJSoZmctjAyhkKp9SJk="
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">紅燒素食麵</h5>
+                                        <p class="card-text">紅燒素食材面，湯頭香濃，充盈食材原味，搭配豐盛的蔬菜和口腔獨特的麵條，給您帶來健康與美味的完美結合。
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n1_2.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4 mt-3 col-sm-5">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://images.unsplash.com/photo-1509680859026-7d8cfc6894f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdXAlMjBub29kbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">日式烏龍麵</h5>
+                                        <p class="card-text">日式烏龍面，麵條滑嫩有激情，湯頭清爽鮮美，搭配精選配料，展示日本料理的精華，帶您享受一路感受與風味的美食之旅。</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n1_3.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4 mt-3 col-sm-5">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/the-delicious-noodles-picture-id907693522?k=20&m=907693522&s=612x612&w=0&h=qhSQXqPNEyt6v3aP5ztqaiG7uU3fL65EM6gvK0x_bHI="
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">肉燥湯麵</h5>
+                                        <p class="card-text">肉燥湯麵，湯頭醇厚，肉燥香空氣四溢，搭配彈牙麵條，融合口感和風味，讓您一口接一口品滋味濃郁的美食享受。
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n1_4.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-4 mt-3 col-sm-5">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/beef-noodle-beef-soup-picture-id1209283861?k=20&m=1209283861&s=612x612&w=0&h=3iji87V93MmMoO8rJYGMfjoW5uz7v4Hg0Ey0b72HJ1Y="
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">紅燒牛雜麵</h5>
+                                        <p class="card-text">
+                                            紅燒牛雜面，湯底醇厚，牛雜肉質鮮嫩，配以豐富的蔬菜和彈牙麵條，帶給您口感豐富、風味獨特的美食體體驗。讓您的產品紅燒牛雜的絕妙滋味。
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n1_5.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-2">
+                        <div class="row">
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/noodle-in-thai-style-picture-id469077286?k=20&m=469077286&s=612x612&w=0&h=Rn1HFkOJtvJ-G2o7GqAB3BpcEa3r5wFzH6pxTjuH1To="
+                                        class="card-img-top card-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">紅燒乾麵</h5>
+                                        <p class="card-text">
+                                            紅燒乾麵，風味獨特，麵條乾燥Q彈，搭配香空氣四溢的紅燒調料，增添豐富口感，是一道令人垂淚欲滴的美味。讓您在一個口中品味濃郁的紅燒味。</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n2_1.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-img card-high">
+                                    <img src="https://media.istockphoto.com/photos/chicken-noodle-gourd-picture-id531689082?k=20&m=531689082&s=612x612&w=0&h=4GPAQvS5VWUp_Nle6VqoMwv6DxgO-9KGhvKDOBmQ20g="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">麻辣燙麵</h5>
+                                        <p class="card-text">麻辣燙是近幾年風靡大街小巷的特色小吃,無論對於大人小孩,麻辣燙都有一種莫名 ...
+                                            麻辣燙老闆們使出渾身解數把麻辣燙做出花樣，干拌麻辣燙便是其中一種。</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n2_2.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-img card-high">
+                                    <img src="https://media.istockphoto.com/photos/noodles-picture-id529790975?k=20&m=529790975&s=612x612&w=0&h=S38-uYFTvXMlTi-wG3X-DanmP4_bY7Cgnjzj6QsSKaE="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">素食乾麵</h5>
+                                        <p class="card-text">
+                                            素食乾拌麵大家都在生活市集買！熱銷素食乾拌麵排行大整理，以及素食和麵。快速出貨七天鑑賞無負擔！生活市集，買不完的生活好物~</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n2_3.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-3">
+                        <div class="row">
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/thai-pork-noodle-thicken-soup-picture-id484474573?k=20&m=484474573&s=612x612&w=0&h=Z4Qd0-coXK2AlnKl_ZFclYyYC-DWYosbe5sXs4rHs5g="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">越南河粉</h5>
+                                        <p class="card-text">近年來吹起的越南河粉熱，你跟上了嗎？由於台灣新住民越來越多，這些好滋味既道地也是新住民們思念家鄉的一種鄉愁.
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="./n3_1.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-img card-high">
+                                    <img src="https://media.istockphoto.com/photos/thai-beef-noodles-picture-id530185082?k=20&m=530185082&s=612x612&w=0&h=EsGvS-4wrgdPtH4T1Hh5hUblBD8nkkchfd_NTrPxWPc="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">紅燒牛肉河粉</h5>
+                                        <p class="card-text">西貢紅燒牛三寶河粉.
+                                            多種中藥材熬製的紅燒醬汁搭配牛大骨熬煮的濃郁湯頭。滷到軟嫩的牛肉搭配爽脆的牛肚及Q彈的牛筋。真材實料及獨特的風味等您來享用。</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="/n3_2.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-img card-high">
+                                    <img src="https://media.istockphoto.com/photos/noodle-topping-with-pork-ball-in-black-spicy-soup-picture-id473426572?k=20&m=473426572&s=612x612&w=0&h=2zSaTgMP2JXEdR_ihk97BaHt7X3I5MlXrqK3XYw6Viw="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">麻辣河粉</h5>
+                                        <p class="card-text">
+                                            老四川網購團媽熱銷泡麵即食風味酸辣粉，宵夜來一碗，湯頭酸辣爽口，粉絲Q彈嚼勁，融入經典川式麻辣香味醇厚,真材實料及獨特的風味等您來享用。</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                            <div class="btn btn-sm " aria-label="Basic example">
+                                                <a href="/n3_3.html" class="btn btn-secondary btn-outline">購買去</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-4">
+                        <div class="row">
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/nasi-goreng-with-chicken-prawns-egg-and-vegetables-horizontal-picture-id532957492?k=20&m=532957492&s=612x612&w=0&h=UL3LOxS0l7IIuR7p2Nha4CyAEkSQjjLj8VciCELX4f0="
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">海鮮蛋炒飯</h5>
+                                        <p class="card-text">
+                                            如何把炒飯炒得好，炒得粒粒分明呢？其實炒飯的蛋液與米飯表面在加熱時會產生焦糖化反應，就能炒出粒粒分明的炒飯
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn btn-sm " aria-label="Basic example">
+                                            <a href="./rice_1.html" class="btn btn-secondary btn-outline">購買去</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/fried-rice-with-prawn-picture-id1225825541?k=20&m=1225825541&s=612x612&w=0&h=a0EmicEmN154S11tD3K0wc_ne1EphhdXz0hwcmtfFfM="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">素食炒飯</h5>
+                                        <p class="card-text">
+                                            當季新鮮的高麗菜最適合清炒，將高麗菜、各式蔬菜切絲拌炒，再加入一點緣素xo醬、白胡椒粉和白飯一起炒香，微微的辣味更好吃！</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn btn-sm " aria-label="Basic example">
+                                            <a href="./rice_2.html" class="btn btn-secondary btn-outline">購買去</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/vegetable-fried-rice-picture-id1039691852?k=20&m=1039691852&s=612x612&w=0&h=mK6nK5efjMWZnKu8us2nbzNq8f8xmw5KsoOcz5vUeYs="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">五穀炒飯</h5>
+                                        <p class="card-text">五穀米炒飯料理怎麼做才好吃？這裡有15 篇超簡單家常食譜通通免費看！包括：蟹管十穀米炒飯, 黑胡椒豬肉炒飯(五穀飯),
+                                            五穀豬肉炒飯</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn btn-sm " aria-label="Basic example">
+                                            <a href="./rice_3.html" class="btn btn-secondary btn-outline">購買去</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="pane-5">
+                        <div class="row">
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/sushi-with-alcohol-picture-id464899961?k=20&m=464899961&s=612x612&w=0&h=pd9yp5mVY3HzFC2I0BqzrP6kxC9RcCMfdYIsD1iBLtw="
+                                        alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">素食壽司</h5>
+                                        <p class="card-text">
+                                            蔬壽司是少見以壽司為主題的蔬食餐廳，在我印象中的素食壽司，變化很難有更多的選擇，想不到蔬壽司可在有限的食材變化出24種口味</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn btn-sm " aria-label="Basic example">
+                                            <a href="./sushi_1.html" class="btn btn-secondary btn-outline">購買去</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/delicious-sushi-picture-id616130182?k=20&m=616130182&s=612x612&w=0&h=dkdTGVQeEDV24J6DqvBZeOHoNBKAjDxM_k4lccVBXJQ="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">高級生食壽司</h5>
+                                        <p class="card-text">
+                                            餐餐挑戰廚藝覺得超膩，今天就吃點高檔的日式料理！在疫情期間日式料理店家紛紛推出超豪華的壽司便當，來撫慰你天天宅在家的憂鬱的心
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn btn-sm " aria-label="Basic example">
+                                            <a href="./sushi_2.html" class="btn btn-secondary btn-outline">購買去</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4 mt-3">
+                                <div class="card text-center border-0 box-shadow card-high">
+                                    <img src="https://media.istockphoto.com/photos/japanese-cuisine-picture-id467073301?k=20&m=467073301&s=612x612&w=0&h=3cx4CuL6lPEIVMy_GqkZV1v5BsADSnP9z4fyX6EgGjI="
+                                        class="card-img-top " alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">綜合壽司</h5>
+                                        <p class="card-text">是由年輕師傅依時節變換食材，自由揮灑的無菜單日本料理。在家防疫還是想品嚐高檔的壽司，壽司割烹推出六款豪華搭配</p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <div class="btn btn-sm " aria-label="Basic example">
+                                            <a href="./sushi_3.html" class="btn btn-secondary btn-outline">購買去</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer1 mt-5">
+        <div class="d-flex justify-content-center">
+            <div class="hr-edge-weak "></div>
+            <p class="text-white fz-50" style="padding-bottom: 50px;">歡迎Jarbar吃吃喝喝行列</p>
+            <div class="hr-edge-weak "></div>
+        </div>
+        <div class="d-flex justify-content-around mt-5">
+            <div class="row bg-light" style="border-radius: 25px;">
+                <div class="col-md-3"><img src="/img/appl3.png" style="border-radius: 25px;" alt=""></div>
+                <div class="col-md-9 text-center">
+                    <div class="text-secondary font-weight-bold" style="margin-top: 40px;font-size: 20x;">Download on
+                        the</div>
+                    <div class="text-secondary font-weight-bold fz-25">App store</div>
+                </div>
+            </div>
+
+            <div class="row bg-light" style="border-radius: 25px;">
+                <div class="col-md-3"><img src="/img/andrios.png" style="border-radius: 25px;">
+                </div>
+                <div class="col-md-9 text-center ">
+                    <div class="text-secondary font-weight-bold" style="margin-top: 40px;font-size: 20x;"> Download on
+                        the</div>
+                    <div class="text-secondary font-weight-bold fz-25">App store</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer2 text-center ">
+        <div class="d-flex justify-content-around">
+            <img src="/img/fb.png" alt="">
+            <img src="/img/blog.png" alt="">
+            <img src="/img/ig.png" alt="">
+            <img src="/img/line.png" alt="">
+            <img src="/img/rank.png" alt="">
+        </div>
+        <div>
+            <p class="text-white mt150 "><i class="far fa-copyright"></i><i class="mr-1 far fa-registered"></i>美食公司版權所有
+            </p>
+            <p class="text-white mt-3">2023 food amazing</p>
+        </div>
+    </div>
+    <!-- 刪除 Modal -->
+    <div class="modal fade" id="del" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-light">
+                    <h5 class="modal-title " id="exampleModalLabel">超好吃拉麵</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    確定刪除此商品嗎?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger text-white " data-target="#DeleteOk"
+                        data-toggle="modal">確定刪除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登入Modal -->
+    <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="del">登入</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">帳號</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密碼</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">記住帳號</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="/backstage.html"
+                            class="text-white">登入</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 刪除成功-->
+    <div class="modal fade" id="DeleteOk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content text-center">
+                <div class="modal-header bg-danger text-light">
+                    刪除成功
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group text-center" style="margin-bottom: 125px;">
+                            <i class="fas fa-times-circle  fa-10x text-danger mt-5"></i>
+                            <p class="mt-5 fz-45">刪除成功</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

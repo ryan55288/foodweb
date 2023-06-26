@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">首頁<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./backstage.html">客服人員</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="dropdown ml-auto">
+                <button type="button" class="btn btn-cart btn-outline-success" data-toggle="dropdown" data-flip="false">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                    <span class="badge badge-pill badge-danger">12</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">項目</th>
+                                <th scope="col">已選擇商品</th>
+                                <th scope="col">數量</th>
+                                <th scope="col">價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><a href="#" data-toggle="modal" data-target="#del"><i
+                                            class="fas fa-trash-alt"></i></a></th>
+                                <th scope="row">1</th>
+                                <td>超好吃拉麵</td>
+                                <td>1</td>
+                                <td class="text-right">$550</td>
+                            </tr>
+                            <tr>
+                                <th><a href="#"><i class="fas fa-trash-alt"></i></a></th>
+                                <th scope="row">2</th>
+                                <td>超好吃牛肉麵</td>
+                                <td>5</td>
+                                <td class="text-right">$1000</td>
+                            </tr>
+                            <tr>
+                                <th><a href="#"><i class="fas fa-trash-alt"></i></a></th>
+                                <th scope="row">3</th>
+                                <td>超好吃乾麵</td>
+                                <td>3</td>
+                                <td class="text-right">$600</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="p-3">
+                        <a href="./total_step.html" class="btn btn-primary btn-block">結帳去</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 刪除 Modal -->
+    <div class="modal fade" id="del" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="del">確定 刪除訂單</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger text-white">確定刪除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-bg jumbotron-fluid">
+        <div class="container">
+            <div class="bg-lighter p-3 mt-5">
+                <h1 class="display-4 font-weight-bold">買到傾家蕩產</h1>
+                <p class="lead font-weight-bold">你想找的網路人氣推薦食品商品就在美食電商購物！買食品立即上美食電商台灣商品專區享超低折扣優惠與運費補助，搭配賣家評價安心網購超簡單！</p>
+                <hr class="my-4 bg-dark">
+                <p class="font-weight-bold">
+                    在家就能買到各式生鮮食品，海鮮、鮮果、蔬菜、肉品、起司、乳製品、有機鮮食、丸類、水餃等生鮮食品最新熱門新鮮美味好貨，購物馬上一次購足，全部新鮮宅配送到家.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sticky-top" style="margin-top: 20px;">
+                    <nav aria-label="breadcrumb">
+                        <!-- bg-transparent-去背景色  -->
+                        <ol class="breadcrumb bg-transparent">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Library</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Data</li>
+                        </ol>
+                        <h2>鮮蔬紅燒素麵</h2>
+                        <div class="d-flex justify-content-end align-items-end">
+                            <div class="text-muted ">售價 $550</div>
+                            <div class="h3 ml-auto mb-0 text-danger">
+                                <small>特價 NT$</small>
+                                <strong>300</strong>
+                            </div>
+                        </div>
+                        <!-- hr-分隔線 -->
+                        <hr>
+                        尺寸:
+                        <div class="btn-group btn-group-toggle btn-group-sm ml-3" data-toggle="buttons">
+                            <label class="btn  btn-outline-secondary">
+                                <input type="radio" name="options" id="option1" checked>大包
+                            </label>
+                            <label class="btn  btn-outline-secondary">
+                                <input type="radio" name="options" id="option2"> 普通
+                            </label>
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="option3"> 小包
+                            </label>
+                        </div>
+                    </nav>
+                    <div class="input-group mt-3">
+                        <select name="" id="" class="form-control">
+                            <option value="1">1 件</option>
+                            <option value="2">2 件</option>
+                            <option value="3">3 件</option>
+                            <option value="4">4 件</option>
+                            <option value="5">5 件</option>
+                        </select>
+                        <div class="div ml-3">
+                            <button type="button" class="btn btn-outline-primary">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 class="mt-3">鮮蔬紅燒素麵</h2>
+                <p>— 將辣豆瓣醬番茄醬炒香後，煮成湯底再過濾，讓湯頭喝起來不會有渣渣口感，留下酸香帶辣的迷人風味，素食這樣吃也很夠味
+                </p>
+                <div class="img mb-3">
+                    <img src="https://media.istockphoto.com/photos/lanzhou-stretched-noodles-picture-id1293674026?b=1&k=20&m=1293674026&s=170667a&w=0&h=SCRwBJLQjDj3qwq25Bk0pb2COJSoZmctjAyhkKp9SJk="
+                        style="width: 612px;" alt="" class="img-fluid">
+                </div>
+                <div class="img">
+                    <img src="https://media.istockphoto.com/photos/cozy-restaurant-for-gathering-with-friends-picture-id1159992039?k=20&m=1159992039&s=612x612&w=0&h=t2lqevaWYLXvcjDeKzbHvIRF6GE3gxiqO6AIezr3Mws="
+                        alt="" class="img-fluid">
+                </div>
+                <div class="img2 mt-3">
+                    <img src="https://media.istockphoto.com/photos/waiter-serving-group-of-female-friends-meeting-for-drinks-and-food-in-picture-id1146671798?k=20&m=1146671798&s=612x612&w=0&h=9U7UA2EwmHDGhkxPyT0Gnt3brfIwoG9U82k0NDR5t8E="
+                        alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer bg-secondary d-flex mt-3">
+        <p class="fp text-white m-auto pt-3"><i class="fas fa-shopping-bag mr-3"></i>雙11電商大血拚</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

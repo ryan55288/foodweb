@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabar美食影音</title>
+    <link rel="stylesheet" href="/all.css">
+    <style>
+        .input-container {
+            position: relative;
+        }
+
+        #textInput {
+            padding-right: 60px;
+            /* 調整右側 padding 以容納按鈕 */
+        }
+
+        #buttonInput {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 50px;
+            /* 調整按鈕寬度 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div>Jabar TV</div>
+                <div class="input-container">
+                    <input type="text" id="textInput">
+                    <button id="buttonInput">按鈕</button>
+                </div>
+                <div class="">
+                    <img src="/img/livestream.png" alt="" class="mr-3">
+                    <img src="/img/apps.png" alt="" class="mr-3">
+                    <img src="/img/bell.png" alt="" class="">
+                    <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="" width="30px" height="30px">
+                </div>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Jabar影音</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 table-hover">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">熱門內容</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">訂閱內容</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">原創內容</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">資料庫</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">歷史紀錄</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">你的影片</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">你的電影</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">待播放清單</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid py-3 mt-5 bg-shadow">
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">美式料理</button>
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">點心蛋糕</button>
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">飯類</button>
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">台式料理</button>
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">越式料理</button>
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">披薩</button>
+        <button type="button" class="btn btn-light  rounded-pill ms-3" id="purple-button">日本料理</button>
+    </div>
+    <div class="container-fluid tab-content py-2">
+        <div class="tab-pane active" id="pane-1">
+            <div class="row">
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high h-100">
+                        <img src="https://images.unsplash.com/photo-1597345637412-9fd611e758f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVlZiUyMG5vb2RsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">半筋紅燒牛肉麵</h5>
+                            <p class="card-text">
+                                半筋紅燒牛肉麵，湯底濃郁鮮美，牛肉酥燒多汁，配上彈牙麵條，每一口都是舌尖上的享受。絕對是經典美食中的必嘗之選！</p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white bg-shadow">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://media.istockphoto.com/photos/lanzhou-stretched-noodles-picture-id1293674026?b=1&k=20&m=1293674026&s=170667a&w=0&h=SCRwBJLQjDj3qwq25Bk0pb2COJSoZmctjAyhkKp9SJk="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">紅燒素食麵</h5>
+                            <p class="card-text">紅燒素食材面，湯頭香濃，充盈食材原味，搭配豐盛的蔬菜和口腔獨特的麵條，給您帶來健康與美味的完美結合。
+                            </p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                <div class="btn btn-sm " aria-label="Basic example">
+                                    <a href="./n1_2.html" class="btn btn-secondary btn-outline">購買去</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://images.unsplash.com/photo-1509680859026-7d8cfc6894f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdXAlMjBub29kbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">日式烏龍麵</h5>
+                            <p class="card-text">日式烏龍面，麵條滑嫩有激情，湯頭清爽鮮美，搭配精選配料，展示日本料理的精華，帶您享受一路感受與風味的美食之旅。</p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                <div class="btn btn-sm " aria-label="Basic example">
+                                    <a href="./n1_3.html" class="btn btn-secondary btn-outline">購買去</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://media.istockphoto.com/photos/the-delicious-noodles-picture-id907693522?k=20&m=907693522&s=612x612&w=0&h=qhSQXqPNEyt6v3aP5ztqaiG7uU3fL65EM6gvK0x_bHI="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">肉燥湯麵</h5>
+                            <p class="card-text">肉燥湯麵，湯頭醇厚，肉燥香空氣四溢，搭配彈牙麵條，融合口感和風味，讓您一口接一口品滋味濃郁的美食享受。
+                            </p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://media.istockphoto.com/photos/beef-noodle-beef-soup-picture-id1209283861?k=20&m=1209283861&s=612x612&w=0&h=3iji87V93MmMoO8rJYGMfjoW5uz7v4Hg0Ey0b72HJ1Y="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">紅燒牛雜麵</h5>
+                            <p class="card-text">
+                                紅燒牛雜面，湯底醇厚，牛雜肉質鮮嫩，配以豐富的蔬菜和彈牙麵條，帶給您口感豐富、風味獨特的美食體體驗。讓您的產品紅燒牛雜的絕妙滋味。
+                            </p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                <div class="btn btn-sm " aria-label="Basic example">
+                                    <a href="./n1_5.html" class="btn btn-secondary btn-outline">購買去</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://media.istockphoto.com/photos/beef-noodle-beef-soup-picture-id1209283861?k=20&m=1209283861&s=612x612&w=0&h=3iji87V93MmMoO8rJYGMfjoW5uz7v4Hg0Ey0b72HJ1Y="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">紅燒牛雜麵</h5>
+                            <p class="card-text">
+                                紅燒牛雜面，湯底醇厚，牛雜肉質鮮嫩，配以豐富的蔬菜和彈牙麵條，帶給您口感豐富、風味獨特的美食體體驗。讓您的產品紅燒牛雜的絕妙滋味。
+                            </p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                <div class="btn btn-sm " aria-label="Basic example">
+                                    <a href="./n1_5.html" class="btn btn-secondary btn-outline">購買去</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://media.istockphoto.com/photos/beef-noodle-beef-soup-picture-id1209283861?k=20&m=1209283861&s=612x612&w=0&h=3iji87V93MmMoO8rJYGMfjoW5uz7v4Hg0Ey0b72HJ1Y="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">紅燒牛雜麵</h5>
+                            <p class="card-text">
+                                紅燒牛雜面，湯底醇厚，牛雜肉質鮮嫩，配以豐富的蔬菜和彈牙麵條，帶給您口感豐富、風味獨特的美食體體驗。讓您的產品紅燒牛雜的絕妙滋味。
+                            </p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                <div class="btn btn-sm " aria-label="Basic example">
+                                    <a href="./n1_5.html" class="btn btn-secondary btn-outline">購買去</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4 mt-3 col-sm-5">
+                    <div class="card text-center border-0 box-shadow card-high">
+                        <img src="https://media.istockphoto.com/photos/beef-noodle-beef-soup-picture-id1209283861?k=20&m=1209283861&s=612x612&w=0&h=3iji87V93MmMoO8rJYGMfjoW5uz7v4Hg0Ey0b72HJ1Y="
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">紅燒牛雜麵</h5>
+                            <p class="card-text">
+                                紅燒牛雜面，湯底醇厚，牛雜肉質鮮嫩，配以豐富的蔬菜和彈牙麵條，帶給您口感豐富、風味獨特的美食體體驗。讓您的產品紅燒牛雜的絕妙滋味。
+                            </p>
+                        </div>
+                        <div class="card-footer border-top-0 bg-white">
+                            <div class="btn-group btn-group-sm " role="group" aria-label="Basic example">
+                                <div class="btn btn-sm " aria-label="Basic example">
+                                    <a href="./n1_5.html" class="btn btn-secondary btn-outline">購買去</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+</script>
+
+</html>

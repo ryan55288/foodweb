@@ -1,0 +1,265 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+/* ///////////////////////////////////////////////// */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.btn-cart {
+	background: transparent;
+	position: relative;
+}
+
+.btn-cart .badge {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+}
+
+.dropdown-menu-right {
+	right: 0;
+	left: auto;
+}
+
+.header-carousel-item {
+	background-size: cover;
+	background-position: center center;
+	min-height: 400px;
+}
+
+/* 圖要適當的呈現方法*/
+
+
+.jumbotron-bg {
+	background-image: url(https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWF0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60);
+	background-size: auto;
+	background-position: center center;
+	min-height: 400px;
+}
+
+.jumbotron-total-bg {
+	background-image: url(https://images.unsplash.com/photo-1553531889-56cc480ac5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvcHBpbmclMjBzdXBlcm1hcmtldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60);
+	background-size: auto;
+	background-position: center center;
+	min-height: 400px;
+}
+
+.bg-carousel {
+	background-size: auto;
+	background-position: center center;
+}
+
+.bg-lighter {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 25px;
+}
+
+.bg-lighter-total {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 25px;
+	height: 250px;
+}
+
+/* 陰影部分 1.水平移動2.上下垂直3.擴散*/
+.box-shadow {
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
+	transition: box-shadow .3s;
+}
+
+.box-shadow:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
+}
+
+.card-high {
+	height: 100%;
+}
+
+/* 字體大小*/
+.fz-45 {
+	font-size: 45px;
+}
+
+.fz-50 {
+	font-size: 50px;
+}
+
+
+/* 首頁底下分隔線 */
+.hr-edge-weak {
+	border: 0;
+	padding-top: 3px;
+	background: linear-gradient(to right, transparent, #d0d0d5, transparent);
+}
+
+.footer1 {
+	background: #5C5C5C;
+	padding: 150px;
+}
+
+.footer2 {
+	background: #D5AD78;
+	padding: 100px;
+}
+
+/* 底下ICON */
+.bottomIcon {
+	background: #D5AD78;
+	border: none;
+	border-radius: 50%;
+}
+
+.mt150 {
+	margin-top: 150px;
+}
+
+/* 顏色 */
+.bg-milktea {
+	background: #D5AD78;
+}
+
+#purple-button {
+	background-color: white;
+	border-color: #000;
+	border-width: 2px;
+}
+
+#purple-button:active {
+	background-color: #F7F0FF;
+	color: #772AD9;
+	border-color: #772AD9;
+	border-width: 2px;
+}
+
+.bg-shadow {
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2)
+}
