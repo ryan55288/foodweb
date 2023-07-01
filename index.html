@@ -29,8 +29,10 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 mr-2" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"
+                    id="searchInput">
+                <button class="btn btn-outline-success my-2 my-sm-0 mr-2" onclick=searchPage()
+                    type="submit">Search</button>
                 <button class="btn btn-success my-2 my-sm-0"><a href="./backstage.html" class="text-white"
                         data-target="#login" data-toggle="modal">客服</a></button>
             </form>
@@ -144,9 +146,9 @@
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-3 sticky-top">
+            <div class="col-md-3 ">
                 <!-- sticky-top 將欄位固定在上方 -->
-                <div class="list-group  mt-3">
+                <div class="list-group  mt-3 sticky-top">
                     <a href="#pane-1" class="list-group-item list-group-item-action " aria-current="true"
                         data-toggle="list">
                         <i class="fas fa-utensils mr-2"></i>
@@ -489,7 +491,8 @@
     <div class="footer1 mt-5">
         <div class="d-flex justify-content-center">
             <div class="hr-edge-weak "></div>
-            <p class="text-white fz-50" style="padding-bottom: 50px;">歡迎Jarbar吃吃喝喝行列</p>
+            <p class="text-white fz-50" style="padding-bottom: 50px;">歡迎加入Jarbar行列<br class="mt-1"></p>
+            <p class="text-white fz-50" style="padding-bottom: 50px;">一起吃吃喝喝吧<br class="mt-1"></p>
             <div class="hr-edge-weak "></div>
         </div>
         <div class="d-flex justify-content-around mt-5">
@@ -506,7 +509,7 @@
                 <div class="col-md-3"><img src="./img/andrios.png" style="border-radius: 25px;">
                 </div>
                 <div class="col-md-9 text-center ">
-                    <div class="text-secondary font-weight-bold" style="margin-top: 40px;font-size: 25x;"> Download on
+                    <div class="text-secondary font-weight-bold" style="margin-top: 40px;font-size: 25x;">Download on
                         the</div>
                     <div class="text-secondary font-weight-bold fz-25">App store</div>
                 </div>
@@ -522,7 +525,8 @@
             <img src="./img/rank.png" alt="">
         </div>
         <div>
-            <p class="text-white mt150 "><i class="far fa-copyright"></i><i class="mr-1 far fa-registered"></i>美食公司版權所有
+            <p class="text-white mt150 "><i class="far fa-copyright"></i><i
+                    class="mr-1 far fa-registered"></i>Jarbar股份有限公司版權所有
             </p>
             <p class="text-white mt-3">2023 food amazing</p>
         </div>
@@ -569,7 +573,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">密碼</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1"
+                            <input type="text" class="form-control" id="exampleInputPassword1"
                                 placeholder="Password">
                         </div>
                         <div class="form-check">
@@ -608,7 +612,7 @@
             </div>
         </div>
     </div>
-    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>

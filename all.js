@@ -152,3 +152,18 @@
         });
 
     };
+
+    function searchPage() {
+        var keyword = document.getElementById('searchInput').value;
+        console.log("123")
+        // 根据输入的关键字执行相应的操作
+        if (keyword === "乾麵") {
+            window.location.href = 'n1_2.html';
+        } else if (keyword === 'page2') {
+            window.location.href = 'page2.html';
+        } else if (keyword === 'page3') {
+            window.location.href = 'page3.html';
+        } else {
+            alert('沒有找到此頁面喔~');
+        }
+    }
