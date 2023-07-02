@@ -59,16 +59,26 @@
 
         /* 在768以下會套用這個色彩 */
         @media (max-width: 768px) {
+            .font-center-white {
+                display: flex;
+                justify-content: center;
+            }
+
             .text-all-sm-light {
                 color: #FFF;
                 border-color: #FFF;
+            }
+
+            .bg-white2 {
+                border-radius: 25px 25px 25px 25px;
+                background: #fff;
             }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top">
         <div class="container">
             <a class="navbar-brand text-light font-weight-bold" href="#">首頁</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -179,22 +189,23 @@
         <div class="container">
             <div class="row justify-content-end  text-md-dark">
                 <div class="col-md-7">
-                    <h3 class="text-info text-center">Jabar的分店</h3>
+                    <h3 class="text-info text-center"><img src="./img/JABARLOGO.png" alt=""
+                            class="mr-2 bg-white2">Jabar的分店</h3>
                     <div class="row mt-5">
                         <div class="col-md-6">
-                            <h4 class="text-dark">北車分館</h4>
+                            <h4 class="font-center-white">北車分館</h4>
                             <p>北車分店特色：位於交通樞紐，提供快捷又美味的麵食，方便忙碌的旅客享用。</p>
                         </div>
                         <div class="col-md-6">
-                            <h4 class="text-dark">公館分館</h4>
+                            <h4 class="font-center-white">公館分館</h4>
                             <p>青春活潑的學生氛圍，提供多種多樣的麵食選擇，讓學生們享受美食美食的同時感受學習生活的活力。</p>
                         </div>
                         <div class="col-md-6">
-                            <h4 class="text-dark">信義分館</h4>
+                            <h4 class="font-center-white">信義分館</h4>
                             <p>位於繁華商圈，精緻的用餐環境和高品質的麵食，結合了時尚與美味，讓您享受奢華的餐飲體驗。</p>
                         </div>
                         <div class="col-md-6">
-                            <h4 class="text-dark">新生分館</h4>
+                            <h4 class="font-center-white">新生分館</h4>
                             <p>新生分店特色：獨特的地理位置，環境優美，提供新鮮食材和精緻調製的湯頭，讓您在舒適的環境中享受正宗的麵食。</p>
                         </div>
                     </div>
